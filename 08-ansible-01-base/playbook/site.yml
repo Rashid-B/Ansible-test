@@ -1,0 +1,20 @@
+---
+  - name: Print os facts
+    hosts: work
+    tasks:
+      - name: Print OS
+        debug:
+          msg: "{{ ansible_distribution }}"
+      - name: Print fact
+        debug:
+          msg: "{{ some_fact }}"
+    
+  - name: Show facts on the Fedora
+    hosts: fed
+    tasks: 
+      - name: Print version
+        debug:
+          msg: "{{ ansible_distribution_version }}"
+      - name: Print fact
+        debug:
+          msg: "{{ some_fact }}"
