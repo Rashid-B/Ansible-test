@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  clickhouse-01:
+    image: pycontribs/centos:7
+    container_name: clickhouse-01
+    command: /bin/sleep 99999999
+  vector-01:
+    image: pycontribs/centos:7
+    container_name: vector-01
+    command: /bin/sleep 99999999
+
+
